@@ -1,0 +1,25 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+<aura:attribute name="mapType" type="List" />
+    <lightning:card title="Map Declaration">
+    <lightning:layout verticalalign="stretch, no-shrink" multipleRows="true">
+        <lightning:layoutItem size="6" >
+            <div class="iterationClass">
+                <aura:iteration items="{!v.mapType}" var="mapVar"><br/>
+                    {!mapVar.key} &nbsp;
+                    {!mapVar.value}
+                </aura:iteration>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="6"></lightning:layoutItem>
+    </lightning:layout>
+
+    <lightning:layout verticalalign="stretch, no-shrink" multipleRows="true">
+        <lightning:layoutItem size="6">
+            <div class="btnClass">
+                <lightning:button variant="brand" label="MapButton" title="MapButton" onclick="{! c.showMap }"/>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="6"></lightning:layoutItem>
+    </lightning:layout>
+    </lightning:card>
+</aura:component>

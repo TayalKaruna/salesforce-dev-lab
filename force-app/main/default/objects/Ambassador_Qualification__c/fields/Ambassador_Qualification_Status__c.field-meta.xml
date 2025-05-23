@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ambassador_Qualification_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Ambassador Qualification Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application Submitted</fullName>
+                <default>false</default>
+                <label>Application Submitted</label>
+            </value>
+            <value>
+                <fullName>Application Reviewed</fullName>
+                <default>false</default>
+                <label>Application Reviewed</label>
+            </value>
+            <value>
+                <fullName>Active Six Months</fullName>
+                <default>false</default>
+                <label>Active Six Months</label>
+            </value>
+            <value>
+                <fullName>Ready for Onboarding</fullName>
+                <default>false</default>
+                <label>Ready for Onboarding</label>
+            </value>
+            <value>
+                <fullName>Onboarded</fullName>
+                <default>false</default>
+                <label>Onboarded</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Ready for Training</fullName>
+                <default>false</default>
+                <label>Ready for Training</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

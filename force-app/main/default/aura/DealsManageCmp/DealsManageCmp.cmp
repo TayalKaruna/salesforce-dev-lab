@@ -1,0 +1,134 @@
+<aura:component controller="DealManageV1" implements="flexipage:availableForRecordHome,force:hasRecordId,force:appHostable,force:lightningQuickActionWithoutHeader" access="global">
+    
+    <aura:attribute name="DAList" type="object"/>
+    <aura:attribute name="totalDealSummary" type="object"/>
+    
+    <!--aura attributes for today deals section-->
+   <!-- <aura:attribute name="DAListCount" type="Integer" default="0"/>-->
+    <aura:attribute name="TodayDealsAccepted" type="Integer" default="0"/>
+    <aura:attribute name="TodayDealsRejected" type="Integer" default="0"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title">
+            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                <lightning:icon name="utility:switch" size="small"/>
+                <span class="slds-truncate" title="Today's Deal Summary">TODAY'S DEAL SUMMARY</span>
+            </button>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem size="5" padding="around-small">
+                    <div>
+                        Today's Deals Accepted : {!v.TodayDealsAccepted}
+                    </div>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="5" padding="around-small">
+                    <div>
+                        Today's Deals Rejected : {!v.TodayDealsRejected}
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem size="5" padding="around-small">
+                    <div>
+                        Today's Deals Available : {!v.totalDealSummary.totalAvailableDA}
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+        </div>
+    </div>
+    
+    <!--Total Deal Smmary section start-->
+    
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title">
+            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                <lightning:icon name="utility:switch" size="small"/>
+                <span class="slds-truncate" title="Total Deal Summary">TOTAL DEAL SUMMARY</span>
+            </button>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+            
+            <lightning:layout multipleRows="true">
+                
+                <lightning:layoutItem size="4" padding="around-small">
+                    <div>
+                        Deals Accepted : {!v.totalDealSummary.DealsAccepted}
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem size="4" padding="around-small">
+                    <div>
+                        Deals Rejected : {!v.totalDealSummary.DealsRejected}
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </div>
+    </div>
+    
+    <!-- Deals table section --> 
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title">
+            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                 <span class="slds-truncate" title="Today's Deal Summary">DEAL</span>
+            </button>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <strong><div class="slds-truncate" title="Action">Action</div></strong>
+                        </th>
+                        <th scope="col">
+                            <strong><div class="slds-truncate" title="Status">status</div></strong>
+                        </th>
+                        <th scope="col">
+                            <strong><div class="slds-truncate" title="Deal Name">Deal Name</div></strong>
+                        </th>
+                        <th scope="col">
+                            <strong><div class="slds-truncate" title="Valid Through">Valid Through</div></strong>
+                        </th>
+                        <th scope="col">
+                            <strong><div class="slds-truncate" title="Available Deals">Available Deals</div></strong>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.DAList}" var="da"> 
+                        <tr>
+                            <th scope="row" data-label="Action">
+                                <lightning:button title="accpet" label="Accpet" variant="brand" onclick="{!c.updateStatus}"
+                                                  aura:id="Accepted" value="{!da.Id}" disabled="{!or(da.Action__c =='Accepted', da.Action__c =='Rejected')}"/>&nbsp;
+                                <lightning:button label="Reject" title="Reject" onclick="{!c.updateStatus}" variant="brand"
+                                                  aura:id="Rejected" value="{!da.Id}" disabled="{!or(da.Action__c =='Accepted', da.Action__c =='Rejected')}"/>
+                                
+                            </th>
+                            <th scope="row" data-label="Status">
+                                <div class="slds-truncate" title="Status">{!da.Action__c}</div>
+                            </th>
+                            <th scope="row" data-label="Name">
+                                <div class="slds-truncate" title="Deal Name">{!da.Deal__r.Name}</div>
+                            </th>
+                            <th scope="row" data-label="Valid Through">
+                                <div class="slds-truncate" title="Valid Through">
+                                    <lightning:formattedDateTime value="{!da.Deal__r.Valid_Through__c}" year="numeric" month="numeric" day="numeric" hour="2-digit"
+                                                                 minute="2-digit" hour12="false"/>
+                                </div>
+                            </th>
+                            <th scope="row" data-label="Available Deals">
+                                <div class="slds-truncate" title="Available Deals">{!da.Deal__r.Available_Deals__c}</div>
+                            </th>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</aura:component>

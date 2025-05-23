@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Email varification">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-input label="Email" value={email} data-id={recordId}>
+                </lightning-input>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small" size="12">
+                <div class="slds-button">
+                    <lightning-button class="slds-m-left_x-small" variant="brand" label="Verify" onclick={handleVerify}></lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template> 

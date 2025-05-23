@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title="Getter Method">
+        <div class="slds-var-m-around_medium">
+            <strong>List of users:</strong><br/>
+            <template for:each={userNames} for:item="user">
+                <p key={user}>{user}</p>
+            </template><br/>
+            <strong>First user name is :</strong><br/>
+            <p>{firstUser}</p>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <strong>Sum of {num1} and {num2}:</strong><br/>
+            <p>{sum}</p>
+        </div>
+    </lightning-card>
+</template>

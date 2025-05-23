@@ -1,0 +1,98 @@
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    scrollbar-width: none;
+    overflow: hidden;
+}
+
+/* Profile Card 
+.profile-card {
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.profile-picture {
+    position: absolute;
+    top: 100px; 
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: white;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50
+}*/
+
+/* Center the profile container */
+.profile {
+    width: 600px;
+    margin: 50px auto;
+    position: relative;
+    text-align: center;
+}
+
+/* Cover Photo */
+.cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Profile Photo */
+.user {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: -50px; /* Overlaps the cover photo */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the image */
+    border: 5px solid white;
+    background: white;
+}
+
+.content {
+    position: absolute;
+    top: 430px;
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+    left: 509px;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+
+
+

@@ -1,0 +1,282 @@
+/* h1{} => selector */
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    margin: 0;
+    font-family: 'Montserrat';
+    overflow-y: auto;
+}
+.card{
+    display: flex;
+    flex-direction: column; /* Aligns children (sections) vertically */
+    align-items: center; /* Centers them */
+    gap: 100px; /* Adds space between sections */
+    position: absolute;
+    top: 11px;
+    /* max-block-size: 101%; */
+    height: 300px;
+    width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+.section{
+   /* position: relative;
+    top: 163px;
+    left: -95px;*/
+    padding: 15px;
+    text-align: left;
+}
+.card1 {
+    width: 800px;
+    height: 400px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 253px;
+}
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.food1Head{
+    font-size: 30px;
+    position: absolute;
+    top: 285px;
+}
+
+.card2{
+    width: 80%;
+    max-width: 900px;
+    /*height: 400px;
+    border-radius: 15px;*/
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    top: 560px;
+}
+.bg-img{
+    width: 100%;
+    border-radius: 24px;
+}
+
+.overlay{
+    text-align: center;
+    color: white;
+    /* background: rgba(0, 0, 0, 0.4); */
+    padding: 20px;
+    /* border-radius: 15px; */
+    position: absolute;
+    /* margin-left: -816px;*/
+    bottom:100px;
+    top: 120px;
+}
+.food-overlay1{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 25px;
+}
+.food-overlay{
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    /*border-radius: 15px;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.food-overlay h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+.food-overlay p {
+    font-size: 18px;
+    margin: -4px 0 10px 0;
+    font-size: 21px;
+}
+.food-img{
+    height: 340px;
+    width: 100%;
+    object-fit: cover;
+}
+.btn-white{
+    background-color: #fff;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+    margin-top: 9px;
+    width: 150px;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 27px;
+    color: black;
+    cursor: pointer;
+    /* align-items: center; */
+    /*position: absolute;*/
+    /* margin: auto; */
+    /* left: auto; */
+    /*right: 345px;*/
+    display: block;
+    margin: 0 auto; 
+}
+
+h1{
+    font-weight: bold;
+    font-size: 32px;
+    font-family: sans-serif;
+}
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.location-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f8f8f8;
+    border-right: 1px solid #ddd;
+    position: relative;
+    top: 12px;
+    margin-bottom: 46px;
+    height: 20px;
+}
+.location-box select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    padding-left: 30px; /* Space for the icon */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/684/684908.png'); /* Location icon */
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+.searchInput{
+    padding: 11px;
+    border: none;
+    width: 230px;
+    background: unset;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Aligns children (sections) vertically */
+    align-items: center; /* Centers them */
+    gap: 30px; /* Adds space between sections */
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.promoted {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    width: 63px;
+    text-align: center;
+}
+
+.discount {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #266FEF;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    /* border-radius: 4px; */
+    width: 152px;
+    text-align: left;
+}
+
+.time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 62px;
+    text-align: center;
+}
+
+.content {
+    padding: 15px;
+    text-align: left;
+}
+
+.cuisine {
+    color: gray;
+    /* font-size: 26px; */
+    /* margin: -25px 0; */
+    position: relative;
+    top: -16px;
+}
+
+.safety {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.safe{
+    font-size: 16px;
+    color: grey;
+}
+.safety-badge {
+    background: green;
+    color: white;
+    padding: 5px 8px;
+    font-size: 10px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+/*.safety p {
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+}*/
+
+

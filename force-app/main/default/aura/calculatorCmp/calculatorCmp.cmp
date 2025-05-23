@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="input1" type="integer"/>
+    <aura:attribute name="input2" type="integer"/>
+    <aura:attribute name="result" type="integer"/>
+    <lightning:card>
+        <lightning:layout multipleRows="true" verticalalign="stretch, no-shrink">
+            <lightning:layoutItem size="6">
+                <lightning:input name="AuraInput1" label="AuraInput1" required="true" value="{!v.input1}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6"></lightning:layoutItem>    
+        </lightning:layout>
+        
+        <lightning:layout multipleRows="true" verticalalign="stretch, no-shrink">
+            <lightning:layoutItem size="6">
+                <lightning:input name="AuraInput2" label="AuraInput2" required="true" value="{!v.input2}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6"></lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout multipleRows="true" verticalalign="stretch, no-shrink">
+            <lightning:layoutItem size="6">
+                <lightning:input name="AuraInput3" label="Result" value="{!v.result}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6"></lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout>
+            <lightning:layoutItem size="3"></lightning:layoutItem> 
+            <lightning:layoutItem size="6">
+                    <lightning:buttonGroup>
+                        <div style="display:block;margin-top:5%;">
+                        <lightning:button label="Add" onclick="{!c.clickAdd}" variant="brand"/>
+                        <lightning:button label="Multiply" onclick="{!c.clickMulty}" variant="brand"/>
+                        <lightning:button label="Divide" onclick="{!c.clickDiv}" variant="brand"/>
+                        <lightning:button label="Subtract" onclick="{!c.clickSub}" variant="brand"/>
+                        </div>
+                    </lightning:buttonGroup>
+                
+            </lightning:layoutItem>
+            <lightning:layoutItem size="3"></lightning:layoutItem>        
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

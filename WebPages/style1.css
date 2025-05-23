@@ -1,0 +1,68 @@
+.card1 {
+    width: 800px;
+    height: 400px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Aligns children (sections) vertically */
+    align-items: center; /* Centers them */
+    gap: 30px; /* Adds space between sections */
+    width: 100%;
+}
+.bg-img{
+    width: 100%;
+    border-radius: 24px;
+}
+
+.overlay{
+    text-align: center;
+    color: white;
+    /* background: rgba(0, 0, 0, 0.4); */
+    padding: 20px;
+    /* border-radius: 15px; */
+    position: absolute;
+    /* margin-left: -816px;*/
+    bottom:100px;
+    top: 120px;
+}
+.btn-white{
+    background-color: #fff;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+    margin-top: 9px;
+    width: 150px;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 27px;
+    color: black;
+    cursor: pointer;
+    /* align-items: center; */
+    /*position: absolute;*/
+    /* margin: auto; */
+    /* left: auto; */
+    /*right: 345px;*/
+    display: block;
+    margin: 0 auto; 
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    scrollbar-width: none;
+    overflow: hidden;
+}
