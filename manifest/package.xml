@@ -6,6 +6,50 @@
 	</types>
 	<types>
 		<members>*</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>StaticResource</name>
+	</types>
+	<!--<types>
+		<members>*</members>
+		<name>ExperienceBundle</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>DigitalExperience</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>Network</name>
+	</types>
+	<types>
+		<members>Library__c</members>
+		<members>Member__c</members>
+		<members>Book__c</members>
+		<members>Book_Issue__c</members>
+		<members>Category__c</members>
+		<members>Author__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Library_Management</members>
+		<members>Health_Appointment_Portal</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
+		<members>Library__c</members>
+		<members>Member__c</members>
+		<members>Book__c</members>
+		<members>Book_Issue__c</members>
+		<members>Category__c</members>
+		<members>Author__c</members>
+		<name>CustomTab</name>
+	</types>
+	
+	<types>
+		<members>*</members>
 		<name>ApexComponent</name>
 	</types>
 	<types>
@@ -41,13 +85,6 @@
 		<members>Zero2Hero_UtilityBar</members>
 		<name>FlexiPage</name>
 	</types>
-	<types>
-		<members>*</members>
-		<name>LightningComponentBundle</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>StaticResource</name>
-	</types>
+	-->
 	<version>62.0</version>
 </Package>
