@@ -2,6 +2,18 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>*</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>StaticResource</name>
+	</types>
+	<!--<types>
+		<members>*</members>
 		<name>ExperienceBundle</name>
 	</types>
 	<types>
@@ -35,10 +47,7 @@
 		<members>Author__c</members>
 		<name>CustomTab</name>
 	</types>
-	<!--<types>
-		<members>*</members>
-		<name>ApexClass</name>
-	</types>
+	
 	<types>
 		<members>*</members>
 		<name>ApexComponent</name>
@@ -76,13 +85,6 @@
 		<members>Zero2Hero_UtilityBar</members>
 		<name>FlexiPage</name>
 	</types>
-	<types>
-		<members>*</members>
-		<name>LightningComponentBundle</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>StaticResource</name>
-	</types>-->
+	-->
 	<version>62.0</version>
 </Package>
